@@ -213,7 +213,7 @@ export default function App({ initialBusId = '', showHelp = true }) {
       {showHelp ? (
         <div className="help">
           <p>
-            Hint: Data is read from Realtime Database at <code>buses/{'{'}busId{'}'}</code> with fields
+            Hint: Data is read from Realtime Database at  <code>buses/{'{'}busId{'}'}</code> with fields
             <code>latitude</code>, <code>longitude</code>, and <code>timestamp</code> (Unix ms).
           </p>
           <p>
