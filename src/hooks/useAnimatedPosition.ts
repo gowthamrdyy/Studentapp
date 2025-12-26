@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { getBearing } from '../utils/bearing';
 
 interface Position {
     lat: number;
@@ -9,8 +8,8 @@ interface Position {
 
 export const useAnimatedPosition = (targetPos: Position, duration: number = 2000) => {
     const [currentPos, setCurrentPos] = useState(targetPos);
-    const frameRef = useRef<number>();
-    const startTimeRef = useRef<number>();
+    const frameRef = useRef<number | undefined>(undefined);
+    const startTimeRef = useRef<number | undefined>(undefined);
     const startPosRef = useRef<Position>(targetPos);
 
     useEffect(() => {
